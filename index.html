@@ -7,13 +7,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; margin:0; padding:0; line-height:1.6; color:#333; background:#f9f9f9; }
-    
+
     /* Header */
     header {
+      position: relative;
       background: url('https://raw.githubusercontent.com/fmuranda/fmuranda.github.io/main/images/header-bg.jpg') no-repeat center center/cover;
       color: white;
       padding: 4rem 1rem;
       text-align: center;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
+      z-index: 1;
+    }
+    header * {
+      position: relative; /* text above overlay */
+      z-index: 2;
     }
     header h1 { margin:0; font-size:2.5rem; }
     header p { margin:0.5rem 0 0; font-size:1.2rem; }
