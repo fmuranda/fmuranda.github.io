@@ -1,69 +1,89 @@
 # Freedom Muranda
 **Climate Scientist | ESG & Sustainability | Data Science**
 
-Welcome to the professional portfolio of **Freedom Muranda**, a Climate Scientist, Data Scientist, and ESG & Sustainability Professional based in Harare, Zimbabwe. This page highlights work at the intersection of climate science, AI-driven analysis, carbon accounting, and ESG and sustainability initiatives, translating technical climate insights into actionable outcomes for organizations and policymakers.
+[![GitHub followers](https://img.shields.io/github/followers/fmuranda?style=social)](https://github.com/fmuranda)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Freedom%20Muranda-blue?logo=linkedin)](https://www.linkedin.com/in/freedommuranda/)
+[![Website](https://img.shields.io/badge/Website-fmuranda.github.io-brightgreen)](https://fmuranda.github.io)
 
-The projects showcased here integrate climate modeling, geospatial analysis, ESG reporting, sustainability assurance, and data-driven decision support. The work emphasizes structured methodologies, reproducible analysis, and credible insights for ESG and sustainability decision-making.
+Welcome to my professional portfolio! I am a **Climate Scientist, Data Scientist, and ESG & Sustainability Professional** based in Harare, Zimbabwe. This page showcases my work at the intersection of **climate modeling, AI-driven analysis, carbon accounting, and ESG & sustainability initiatives**, translating technical insights into actionable outcomes for organizations and policymakers.
+
+My repositories focus on applied and research-oriented projects that combine:  
+- Climate science & modeling  
+- AI & machine learning  
+- ESG reporting & sustainability assurance  
+- Geospatial analysis & carbon accounting  
 
 ---
 
 ## 🌍 Project Portfolio
 
 ### Climate Modeling & Carbon Accounting
-Projects focused on climate modeling workflows, greenhouse gas (GHG) accounting, emissions scenario analysis, and quantitative assessment of environmental datasets. These combine computational modeling, statistical methods, and geospatial analysis to produce **transparent, reproducible climate and ESG assessments**.
+**Focus:** Transparent, reproducible climate and ESG assessments using computational and statistical methods.  
 
-**Key focus areas:**  
-- Climate risk modeling  
-- Carbon footprint analysis  
-- Scenario-based impact assessment  
-- Integration with sustainability frameworks  
+**Key Contributions:**  
+- Climate risk modeling and scenario-based impact assessment  
+- Carbon footprint analysis and GHG accounting  
+- Integration of climate data into ESG and sustainability frameworks  
+
+**Tech Stack:** Python | R | QGIS | Google Earth Engine  
 
 ---
 
 ### 🤖 Climate Data Science & AI
-Projects applying **data science, machine learning, and AI** to climate and ESG datasets, including:  
-- Predictive modeling of climate variables  
-- Spatiotemporal analysis of environmental data  
-- AI-assisted insights for ESG reporting and sustainability decision-making  
+**Focus:** Applying AI and data science to climate & ESG datasets for predictive modeling, spatiotemporal analysis, and decision support.  
 
-This work demonstrates the **convergence of AI and climate analytics** to support evidence-based sustainability strategy.
+**Highlights:**  
+- AI-assisted climate insights for ESG reporting  
+- Spatiotemporal analysis of environmental datasets  
+- Integration of machine learning into sustainability strategy  
+
+**Tech Stack:** Python | R | Machine Learning | AI pipelines | Geospatial Analytics  
 
 ---
 
 ### ♻️ ESG & Sustainability Projects
-Applied projects in sustainability reporting, ESG assurance, and climate disclosure, focusing on translating ESG data into actionable insights, verifying reporting accuracy, and ensuring alignment with international standards.  
+**Focus:** Sustainability reporting, ESG assurance, and climate disclosure aligned with international frameworks.  
 
-**Selected contributions:**  
-- Consolidated and analyzed sustainability disclosures for **Econet Wireless** and **EcoCash Holdings**, integrating multi-year environmental and climate metrics  
-- Performed ESG assurance and structured review of sustainability reports, ensuring credibility and alignment with **GRI, SASB, TCFD, CDP**  
-- Developed data-driven methodologies to quantify climate-related risks and opportunities, supporting strategic ESG decision-making  
+**Selected Contributions:**  
+- Consolidated and analyzed multi-year sustainability disclosures for **Econet Wireless** and **EcoCash Holdings**  
+- ESG assurance of sustainability reports with alignment to **GRI, SASB, TCFD, CDP**  
+- Developed methodologies to quantify climate-related risks and opportunities  
+
+**Tech Stack:** Excel | Python | Tableau / Power BI | ESG frameworks  
 
 ---
 
 ### 📊 Data Analysis & Visualization
-Reusable scripts, notebooks, and workflows for cleaning, analyzing, and visualizing climate, ESG, and sustainability data. Emphasizes **reproducibility, transparency, and clear communication** for technical and non-technical audiences.  
+**Focus:** Reusable workflows, scripts, and notebooks for cleaning, analyzing, and visualizing climate, ESG, and sustainability data.  
 
-**Key tools:** Python, R, QGIS, Google Earth Engine, Tableau / Power BI dashboards  
+**Key Tools:** Python | R | QGIS | Google Earth Engine | Tableau / Power BI  
+
+**Output:** Clear, reproducible insights for technical and non-technical stakeholders  
 
 ---
 
 ## 📚 Academic Research
 
-### Master’s Research Project  
-**Spatiotemporal Analysis of Climate Variables Under ENSO Influence in Chimanimani, Zimbabwe (2015–2024)**
+### Master’s Research Project
+**Spatiotemporal Analysis of Climate Variables Under ENSO Influence in Chimanimani, Zimbabwe (2015–2024)**  
 
-- Investigated spatiotemporal variability of climate variables under **El Niño–Southern Oscillation (ENSO)** influence  
-- Integrated ground-based and satellite datasets (**MODIS, Landsat**) to assess temporal trends, spatial patterns, and ENSO anomalies  
-- **Technical methods:** Python & R for statistical modeling, Google Earth Engine for satellite data processing, QGIS for spatial visualization  
+**Summary:**  
+- Investigated spatiotemporal variability of climate variables under **El Niño–Southern Oscillation (ENSO)**  
+- Integrated **MODIS and Landsat** satellite datasets for temporal and spatial analysis  
+- Applied reproducible workflows in **Python & R**, **Google Earth Engine**, and **QGIS**  
 
-This research demonstrates **rigorous climate science and geospatial analytics** supporting ESG and sustainability decision-making through reproducible workflows.
+**Impact:** Demonstrates how rigorous climate science and geospatial analytics can support ESG and sustainability decision-making  
+
+---
+
+## 🔗 Links & Contact
+
+[🌐 GitHub Webpage](https://fmuranda.github.io)  
+[🔗 GitHub Profile](https://github.com/fmuranda)  
+[🔗 LinkedIn](https://www.linkedin.com/in/freedommuranda/)  
 
 ---
 
-## 🔗 Links
+*Made with ❤️ by Freedom Muranda*  
 
-- 🌐 [GitHub Webpage](https://fmuranda.github.io)  
-- 🔗 [GitHub Profile](https://github.com/fmuranda)  
-- 🔗 [LinkedIn](https://www.linkedin.com/in/freedommuranda/)
 
----
