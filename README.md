@@ -1,23 +1,23 @@
 # Freedom Muranda
-**Climate Scientist | ESG & Sustainability | Data Science**
+**Climate Scientist | ESG and Sustainability | Data Science**
 
 [![GitHub followers](https://img.shields.io/github/followers/fmuranda?style=social)](https://github.com/fmuranda)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Freedom%20Muranda-blue?logo=linkedin)](https://www.linkedin.com/in/freedommuranda/)
 [![Website](https://img.shields.io/badge/Website-fmuranda.github.io-brightgreen)](https://fmuranda.github.io)
 
-Welcome to my professional portfolio! I am a **Climate Scientist, Data Scientist, and ESG & Sustainability Professional** based in Harare, Zimbabwe. This page showcases my work at the intersection of **climate modeling, AI-driven analysis, carbon accounting, and ESG & sustainability initiatives**, translating technical insights into actionable outcomes for organizations and policymakers.
+Welcome to my professional portfolio! I am a **Climate Scientist, Data Scientist, and ESG and Sustainability Professional** based in Harare, Zimbabwe. This page showcases my work at the intersection of **climate modeling, AI-driven analysis, carbon accounting, and ESG and sustainability initiatives**, translating technical insights into actionable outcomes for organizations and policymakers.
 
 My repositories focus on applied and research-oriented projects that combine:  
-- Climate science & modeling  
-- AI & machine learning  
-- ESG reporting & sustainability assurance  
-- Geospatial analysis & carbon accounting  
+- Climate science and modeling  
+- AI and machine learning  
+- ESG reporting and sustainability assurance  
+- Geospatial analysis and carbon accounting  
 
 ---
 
 ## 🌍 Project Portfolio
 
-### Climate Modeling & Carbon Accounting
+### Climate Modeling and Carbon Accounting
 **Focus:** Transparent, reproducible climate and ESG assessments using computational and statistical methods.  
 
 **Key Contributions:**  
@@ -30,7 +30,7 @@ My repositories focus on applied and research-oriented projects that combine:
 ---
 
 ### 🤖 Climate Data Science & AI
-**Focus:** Applying AI and data science to climate & ESG datasets for predictive modeling, spatiotemporal analysis, and decision support.  
+**Focus:** Applying AI and data science to climate and ESG datasets for predictive modeling, spatiotemporal analysis, and decision support.  
 
 **Highlights:**  
 - AI-assisted climate insights for ESG reporting  
@@ -70,13 +70,13 @@ My repositories focus on applied and research-oriented projects that combine:
 **Summary:**  
 - Investigated spatiotemporal variability of climate variables under **El Niño–Southern Oscillation (ENSO)**  
 - Integrated **MODIS and Landsat** satellite datasets for temporal and spatial analysis  
-- Applied reproducible workflows in **Python & R**, **Google Earth Engine**, and **QGIS**  
+- Applied reproducible workflows in **Python and R**, **Google Earth Engine**, and **QGIS**  
 
 **Impact:** Demonstrates how rigorous climate science and geospatial analytics can support ESG and sustainability decision-making  
 
 ---
 
-## 🔗 Links & Contact
+## 🔗 Links and Contact
 
 [🌐 GitHub Webpage](https://fmuranda.github.io)  
 [🔗 GitHub Profile](https://github.com/fmuranda)  
