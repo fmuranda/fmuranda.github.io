@@ -3,43 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freedom Kudakwashe Muranda | ESG, Climate Risk & Sustainability Assurance</title>
-    <meta name="description" content="Portfolio of Freedom K. Muranda - ESG & Sustainability, Climate Risk and Modelling, and Sustainability Assurance.">
+    <title>Freedom K. Muranda | Climate Data Scientist & ESG Leader</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
                     },
                     colors: {
                         brand: {
                             50: '#f0fdfa',
                             100: '#ccfbf1',
-                            400: '#2dd4bf', // The requested green
-                            500: '#14b8a6',
+                            500: '#14b8a6', 
                             600: '#0d9488',
                             700: '#0f766e',
                             900: '#134e4a',
-                        },
-                        surface: {
-                            50: '#ffffff',
-                            100: '#f8fafc',
-                            200: '#f1f5f9',
-                            800: '#1e293b',
-                            900: '#0f172a',
                         }
                     }
                 }
@@ -48,311 +38,232 @@
     </script>
 
     <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #2dd4bf; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
-
+        .text-gradient {
+            background: linear-gradient(to right, #0d9488, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .image-mask {
+            border-radius: 2.5rem;
+            box-shadow: 0 40px 80px -15px rgba(20, 184, 166, 0.2);
         }
+        .text-huge { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 1; }
+        .text-impact { font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.2; }
     </style>
 </head>
-<body class="bg-surface-50 text-slate-700 font-sans antialiased selection:bg-brand-400 selection:text-white">
+<body class="bg-white text-slate-800 font-sans selection:bg-brand-500 selection:text-white antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <div class="w-8 h-8 bg-brand-400 rounded-lg flex items-center justify-center text-white font-bold font-display">
-                        FM
-                    </div>
-                    <span class="font-display font-bold text-lg text-slate-900 tracking-tight">Freedom K. Muranda</span>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="text-slate-600 hover:text-brand-600 transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#skills" class="text-slate-600 hover:text-brand-600 transition-colors px-3 py-2 rounded-md text-sm font-medium">Expertise</a>
-                        <a href="#education" class="text-slate-600 hover:text-brand-600 transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                        <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm">Connect</a>
-                    </div>
-                </div>
-                
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-600 p-2">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+        <div class="max-w-[1600px] mx-auto px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-brand-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">F</div>
+                <span class="font-display font-bold text-2xl tracking-tighter">Freedom K. Muranda</span>
             </div>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="text-slate-600 hover:bg-slate-50 block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="#skills" class="text-slate-600 hover:bg-slate-50 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
-                <a href="#education" class="text-slate-600 hover:bg-slate-50 block px-3 py-2 rounded-md text-base font-medium">Education</a>
-                <a href="#contact" class="text-brand-600 block px-3 py-2 rounded-md text-base font-medium">Connect</a>
+            <div class="hidden lg:flex items-center gap-12 font-bold text-slate-500 uppercase text-xs tracking-widest">
+                <a href="#expertise" class="hover:text-brand-600 transition-colors">Expertise</a>
+                <a href="#education" class="hover:text-brand-600 transition-colors">Background</a>
+                <a href="Muranda_CV.pdf" target="_blank" class="px-8 py-3 bg-brand-600 text-white rounded-2xl hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/20">Full CV</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-white">
-        <!-- Abstract background elements -->
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-400/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-600/5 rounded-full blur-3xl"></div>
+    <section class="pt-40 pb-24 lg:pt-60 lg:pb-40 px-8">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-7 space-y-10 reveal">
+                    <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-700 font-extrabold text-sm tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        Certified Sustainability Professional
+                    </div>
+                    
+                    <h1 class="text-huge font-extrabold tracking-tight text-slate-900">
+                        Bridging <span class="text-gradient">Data Science</span> <br>& ESG Strategy.
+                    </h1>
+                    
+                    <p class="text-impact text-slate-500 font-medium max-w-3xl">
+                        A Climate Data Scientist specializing in <span class="text-slate-900">Risk Modelling</span> and Sustainability Assurance at the intersection of operational excellence and environmental stewardship.
+                    </p>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wider mb-8 reveal">
-                <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
-                ESG & Sustainability | Climate Risk | Sustainability Assurance
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold font-display text-slate-900 mb-6 leading-tight reveal delay-100">
-                Data-Driven <span class="gradient-text">Sustainability</span>
-            </h1>
-            
-            <p class="max-w-2xl text-lg md:text-xl text-slate-600 mb-10 leading-relaxed reveal delay-200">
-                I am Freedom Kudakwashe Muranda. I bridge the gap between <span class="text-brand-700 font-medium">Machine Learning</span> and <span class="text-brand-700 font-medium">Operational Compliance</span> to drive measurable ESG impact.
-            </p>
+                    <div class="flex flex-wrap gap-6 pt-6">
+                        <a href="Muranda_CV.pdf" target="_blank" class="px-12 py-6 bg-brand-600 text-white font-bold text-xl rounded-3xl hover:bg-brand-700 transition-all shadow-2xl shadow-brand-500/30 flex items-center gap-4 group">
+                            <i data-lucide="file-text" class="group-hover:-translate-y-1 transition-transform"></i> 
+                            Download My CV
+                        </a>
+                        <a href="#expertise" class="px-12 py-6 bg-slate-50 text-slate-900 font-bold text-xl rounded-3xl hover:bg-slate-100 border border-slate-200 transition-all">
+                            View Expertise
+                        </a>
+                    </div>
+                </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 reveal delay-300">
-                <a href="#skills" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg transition-all shadow-md flex items-center justify-center gap-2">
-                    <i data-lucide="zap" class="w-4 h-4"></i>
-                    View Expertise
-                </a>
-                <a href="#contact" class="px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm">
-                    <i data-lucide="share-2" class="w-4 h-4"></i>
-                    Connect
-                </a>
-            </div>
-
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-100 pt-10 w-full max-w-4xl reveal delay-300">
-                <div>
-                    <div class="text-3xl font-bold font-display text-brand-600">MSc</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold">Climate Modelling</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold font-display text-brand-600">ISO</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold leading-relaxed">System Auditor</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold font-display text-brand-600">ACSAP</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold">Assurance Practitioner</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold font-display text-brand-600">AI</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold leading-relaxed">Climate Science</div>
+                <div class="lg:col-span-5 relative reveal delay-200">
+                    <div class="absolute -inset-10 bg-brand-500/5 blur-[120px] rounded-full"></div>
+                    <div class="relative group">
+                        <img 
+                            src="IMG_6394.jpg" 
+                            alt="Freedom Kudakwashe Muranda" 
+                            class="relative z-10 w-full aspect-[4/5] object-cover image-mask grayscale hover:grayscale-0 transition-all duration-1000"
+                            onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1200'"
+                        >
+                        <div class="absolute -bottom-6 -left-6 z-20 bg-white p-8 rounded-[2rem] shadow-2xl border border-slate-100 hidden md:block">
+                            <div class="text-brand-600 font-extrabold text-4xl">MSc</div>
+                            <div class="text-slate-400 font-black text-xs uppercase tracking-[0.2em] mt-1">Climate Modelling</div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 z-20 bg-brand-600 p-8 rounded-[2rem] shadow-2xl text-white hidden md:block">
+                            <div class="font-extrabold text-4xl">5+</div>
+                            <div class="text-brand-100 font-bold text-xs uppercase tracking-[0.2em] mt-1">Years Impact</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Summary -->
-    <section id="about" class="py-24 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 mb-8">Professional Summary</h2>
-            <p class="text-lg text-slate-600 leading-relaxed text-left md:text-center">
-                I am a sustainability and climate professional specialized in leading ESG strategy, sustainability reporting, and climate risk management. As a <span class="text-brand-700 font-semibold">Certified Sustainability Professional</span>, I focus on integrating sustainability into core business operations by leveraging advanced data modeling, advising leadership, and delivering outcomes aligned with international standards like GRI, TCFD, and IFRS.
-            </p>
-        </div>
-    </section>
-
-    <!-- Technical Skills Section -->
-    <section id="skills" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 mb-4">Technical Proficiency</h2>
-                <div class="h-1.5 w-16 bg-brand-400 rounded-full mx-auto"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- AI & Machine Learning -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all reveal">
-                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="brain-circuit" class="w-6 h-6 text-brand-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">AI & Machine Learning</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Python</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">TensorFlow</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">PyTorch</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Scikit-learn</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Computer Vision</span>
-                    </div>
+    <!-- Technical Expertise (Replaced Experience as a primary section) -->
+    <section id="expertise" class="py-40 bg-slate-50">
+        <div class="max-w-[1600px] mx-auto px-8">
+            <div class="grid lg:grid-cols-2 gap-24 items-end mb-24">
+                <div class="reveal">
+                    <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-none mb-8">Technical Arsenal.</h2>
+                    <p class="text-2xl text-slate-500 font-medium">Deploying advanced computational science to solve the world's most pressing environmental challenges.</p>
                 </div>
-
-                <!-- Climate & Geospatial -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all reveal delay-100">
-                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="globe" class="w-6 h-6 text-brand-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Climate & Geospatial</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Google Earth Engine</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">QGIS</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Xarray</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Climate Modelling</span>
-                    </div>
-                </div>
-
-                <!-- Internal Audit & Data -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all reveal delay-200">
-                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="check-square" class="w-6 h-6 text-brand-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Audit & Data</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">ISO Auditing</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Power BI</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">SQL</span>
-                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Assurance Management</span>
-                    </div>
+                <div class="flex flex-wrap gap-4 lg:justify-end reveal delay-100">
+                    <span class="px-6 py-3 bg-white border border-slate-200 rounded-2xl font-bold text-slate-400 text-sm tracking-widest uppercase">Python</span>
+                    <span class="px-6 py-3 bg-white border border-slate-200 rounded-2xl font-bold text-slate-400 text-sm tracking-widest uppercase">TensorFlow</span>
+                    <span class="px-6 py-3 bg-white border border-slate-200 rounded-2xl font-bold text-slate-400 text-sm tracking-widest uppercase">GEE</span>
+                    <span class="px-6 py-3 bg-white border border-slate-200 rounded-2xl font-bold text-slate-400 text-sm tracking-widest uppercase">SQL</span>
                 </div>
             </div>
-            
-            <div class="mt-16 pt-10 border-t border-slate-100">
-                <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest text-center">Compliance Standards & Frameworks</p>
-                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-slate-500 font-medium text-sm">
-                    <span class="hover:text-brand-600 transition-colors">GRI Standards</span>
-                    <span class="hover:text-brand-600 transition-colors">TCFD Disclosure</span>
-                    <span class="hover:text-brand-600 transition-colors">IFRS S1 & S2</span>
-                    <span class="hover:text-brand-600 transition-colors">GHG Protocol</span>
-                    <span class="hover:text-brand-600 transition-colors">ISO 14064 & 9001</span>
-                    <span class="hover:text-brand-600 transition-colors">SASB</span>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 hover:border-brand-500 hover:shadow-2xl transition-all group reveal">
+                    <div class="w-20 h-20 bg-brand-50 rounded-3xl flex items-center justify-center text-brand-600 mb-10 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="cpu" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-6">AI & Machine Learning</h3>
+                    <p class="text-xl text-slate-500 leading-relaxed">Specialized in Computer Vision, NLP, and Deep Learning (ConvLSTM) for spatiotemporal analysis and sustainability monitoring.</p>
+                </div>
+
+                <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 hover:border-brand-500 hover:shadow-2xl transition-all group reveal delay-100">
+                    <div class="w-20 h-20 bg-brand-50 rounded-3xl flex items-center justify-center text-brand-600 mb-10 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="globe" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-6">Climate Systems</h3>
+                    <p class="text-xl text-slate-500 leading-relaxed">Quantifying climate risks using Google Earth Engine, QGIS, and Xarray for multi-sector resilience planning.</p>
+                </div>
+
+                <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 hover:border-brand-500 hover:shadow-2xl transition-all group reveal delay-200">
+                    <div class="w-20 h-20 bg-brand-50 rounded-3xl flex items-center justify-center text-brand-600 mb-10 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="shield-check" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-6">ESG Assurance</h3>
+                    <p class="text-xl text-slate-500 leading-relaxed">External assurance and audit conformities for GRI, SASB, TCFD, and IFRS standards across complex organizations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education & Certifications -->
-    <section id="education" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <!-- Education & Credentials -->
+    <section id="education" class="py-40 bg-slate-900 text-white">
+        <div class="max-w-[1600px] mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-24">
+                <div class="lg:col-span-5 reveal">
+                    <h2 class="text-huge font-extrabold mb-16 tracking-tight">Academic Base.</h2>
+                    <div class="space-y-16">
+                        <div>
+                            <div class="text-brand-500 font-black text-xl mb-4">2024</div>
+                            <h4 class="text-4xl font-extrabold">MSc Climate Science & Systems Modelling</h4>
+                            <p class="text-2xl text-slate-400 mt-4">University of Zimbabwe</p>
+                            <p class="text-brand-500 font-bold mt-4">Thesis: Spatiotemporal Analysis Under ENSO Influence</p>
+                        </div>
+                        <div class="pt-16 border-t border-slate-800">
+                            <div class="text-brand-500 font-black text-xl mb-4">2012</div>
+                            <h4 class="text-4xl font-extrabold">BSc Applied Environmental Science</h4>
+                            <p class="text-2xl text-slate-400 mt-4">University of Zimbabwe</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 reveal delay-200">
+                    <div class="bg-white/5 p-16 rounded-[4rem] border border-white/10 backdrop-blur-sm">
+                        <h4 class="text-2xl font-bold mb-12 uppercase tracking-[0.3em] text-slate-500">Board Seats & Certifications</h4>
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <div class="space-y-2">
+                                <div class="text-brand-400 font-black">ACSAP</div>
+                                <div class="text-xl font-bold">Certified Sustainability Assurance Practitioner</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-brand-400 font-black">UNFCCC</div>
+                                <div class="text-xl font-bold">Technical Expert Reviewer (Paris Agreement)</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-brand-400 font-black">GRI Standards</div>
+                                <div class="text-xl font-bold">Certified External Assurance Specialist</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-brand-400 font-black">ISO Lead Auditor</div>
+                                <div class="text-xl font-bold">45001, 14001, 9001 (SHEQ Management)</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-brand-400 font-black">Carbon Analytics</div>
+                                <div class="text-xl font-bold">Certified Carbon Footprint Analyst</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-brand-400 font-black">World Bank / IFC</div>
+                                <div class="text-xl font-bold">Environmental & Social Fundamentals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-40 bg-white">
+        <div class="max-w-[1600px] mx-auto px-8">
+            <div class="text-center space-y-12">
+                <h2 class="text-huge font-extrabold text-slate-900 tracking-tight reveal">Let's Lead.</h2>
                 
-                <!-- Education -->
-                <div>
-                    <h2 class="text-3xl font-bold font-display text-slate-900 mb-10 flex items-center gap-3">
-                        <i data-lucide="graduation-cap" class="text-brand-600"></i> Academic Background
-                    </h2>
-                    <div class="space-y-6">
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm reveal">
-                            <div class="flex justify-between items-start flex-wrap gap-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900">MSc in Climate Science & Systems Modelling</h3>
-                                    <p class="text-brand-600 font-medium mt-1">University of Zimbabwe</p>
-                                </div>
-                                <span class="bg-slate-100 text-slate-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Dec 2024</span>
-                            </div>
-                            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Specialization in Spatiotemporal Analysis of Climate Variables Under ENSO Influence.
-                            </p>
-                        </div>
-
-                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm reveal">
-                            <div class="flex justify-between items-start flex-wrap gap-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900">BSc Honours in Applied Environmental Science</h3>
-                                    <p class="text-brand-600 font-medium mt-1">University of Zimbabwe</p>
-                                </div>
-                                <span class="bg-slate-100 text-slate-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Aug 2012</span>
-                            </div>
-                        </div>
+                <div class="flex flex-col items-center gap-10 reveal delay-100">
+                    <a href="mailto:freedom.muranda@gmail.com" class="text-4xl md:text-6xl font-bold text-brand-600 hover:text-brand-700 transition-colors break-all">
+                        freedom.muranda@gmail.com
+                    </a>
+                    
+                    <div class="flex gap-10 pt-10">
+                        <a href="https://linkedin.com/in/freedommuranda" target="_blank" class="w-24 h-24 flex items-center justify-center bg-slate-50 rounded-[2rem] text-slate-900 hover:bg-brand-600 hover:text-white transition-all shadow-sm">
+                            <i data-lucide="linkedin" class="w-10 h-10"></i>
+                        </a>
+                        <a href="https://github.com/fmuranda" target="_blank" class="w-24 h-24 flex items-center justify-center bg-slate-50 rounded-[2rem] text-slate-900 hover:bg-brand-600 hover:text-white transition-all shadow-sm">
+                            <i data-lucide="github" class="w-10 h-10"></i>
+                        </a>
                     </div>
-                </div>
 
-                <!-- Certifications -->
-                <div>
-                    <h2 class="text-3xl font-bold font-display text-slate-900 mb-10 flex items-center gap-3">
-                        <i data-lucide="award" class="text-brand-600"></i> Credentials
-                    </h2>
-                    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm reveal">
-                        <ul class="space-y-5">
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
-                                </div>
-                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Certified Sustainability Professional</strong></span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
-                                </div>
-                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">ACSAP</strong> - Associate Certified Sustainability Assurance Practitioner</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
-                                </div>
-                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">GRI Certified</strong> (Human Rights, SDGs, ESRS)</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
-                                </div>
-                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Technical Expert Reviewer</strong> - UNFCCC ETF</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
-                                </div>
-                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Certified Carbon Footprint Analyst</strong></span>
-                            </li>
-                        </ul>
+                    <div class="mt-40 pt-16 border-t border-slate-100 w-full flex flex-col md:flex-row justify-between items-center gap-8 text-slate-400 font-black text-xs uppercase tracking-[0.4em]">
+                        <span>Freedom Kudakwashe Muranda &copy; 2026</span>
+                        <div class="flex gap-16">
+                            <span>ESG Strategy</span>
+                            <span>Climate Data Science</span>
+                            <span>Assurance</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Footer / Contact -->
-    <section id="contact" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold font-display text-slate-900 mb-6">Connect</h2>
-            
-            <div class="flex flex-col items-center gap-10 mb-16">
-                <!-- Replace # with actual URL when ready -->
-                <a href="https://github.com/fmuranda" class="inline-flex items-center gap-3 px-10 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-brand-500/20 group scale-105">
-                    <i data-lucide="file-text" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                    Download My CV
-                </a>
-
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="https://linkedin.com/in/freedommuranda" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-50 border border-slate-200 rounded-full text-slate-700 transition-all font-medium shadow-sm">
-                        <i data-lucide="linkedin" class="w-4 h-4 text-brand-600"></i> linkedin.com/in/freedommuranda
-                    </a>
-                    <a href="https://github.com/fmuranda" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-50 border border-slate-200 rounded-full text-slate-700 transition-all font-medium shadow-sm">
-                        <i data-lucide="github" class="w-4 h-4 text-brand-600"></i> fmuranda
-                    </a>
-                </div>
-            </div>
-
-            <div class="pt-10 border-t border-slate-100">
-                <p class="text-slate-400 text-xs tracking-widest uppercase font-bold">
-                    &copy; 2026 Freedom K. Muranda • Certified Sustainability Professional
-                </p>
-            </div>
-        </div>
-    </section>
+    </footer>
 
     <script>
         lucide.createIcons();
-
-        // Reveal on scroll logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -360,20 +271,7 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Mobile Menu logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close menu on click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => menu.classList.add('hidden'));
-        });
     </script>
 </body>
 </html>
