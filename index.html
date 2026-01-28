@@ -1,199 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freedom Muranda | Climate and ESG Portfolio</title>
+    <title>Freedom Kudakwashe Muranda | ESG, Climate Risk & Sustainability Assurance</title>
+    <meta name="description" content="Portfolio of Freedom K. Muranda - ESG & Sustainability, Climate Risk and Modelling, and Sustainability Assurance.">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf', // The requested green
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            900: '#134e4a',
+                        },
+                        surface: {
+                            50: '#ffffff',
+                            100: '#f8fafc',
+                            200: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
-            color: #1f2937;
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #2dd4bf; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .container-custom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .container-custom {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .sidebar {
-                width: 30%;
-                min-width: 300px;
-                position: sticky;
-                top: 2rem;
-                height: fit-content;
-            }
-            .main-content {
-                width: 70%;
-            }
-        }
-
-        .sidebar {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .main-content {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #f0f2f5;
-        }
-
-        .project-card {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        .btn-icon {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: #007ea7;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            transition: color 0.2s;
-        }
-        .btn-icon:hover {
-            color: #005f7a;
-        }
-
-        .btn-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
+        .gradient-text {
+            background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body>
+<body class="bg-surface-50 text-slate-700 font-sans antialiased selection:bg-brand-400 selection:text-white">
 
-<div class="container-custom">
-    
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <img src="https://github.com/fmuranda/fmuranda.github.io/blob/main/85E9FAF0-28C0-43CB-94AE-773D9E87DDD5.jpg?raw=true" alt="Freedom Muranda" class="profile-photo mb-6">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Freedom Muranda</h1>
-        <p class="text-lg font-medium text-blue-600 mb-4">Climate Scientist | ESG and Sustainability | Climate Modelling | Data Science</p>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand-400 rounded-lg flex items-center justify-center text-white font-bold font-display">
+                        FM
+                    </div>
+                    <span class="font-display font-bold text-lg text-slate-900 tracking-tight">Freedom K. Muranda</span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-slate-600 hover:text-brand-600 transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="text-slate-600 hover:text-brand-600 transition-colors px-3 py-2 rounded-md text-sm font-medium">Expertise</a>
+                        <a href="#education" class="text-slate-600 hover:text-brand-600 transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm">Connect</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-600 p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         
-        <div class="text-gray-600 text-center mb-6 leading-relaxed">
-            <p>Climate Data Scientist, Sustainability Professional, and ESG analyst based in Harare, Zimbabwe. I combine climate modeling, AI-driven analysis, carbon accounting, and ESG initiatives to create actionable insights for organizations and policymakers.</p>
-            <p class="mt-4">Specialized in climate data analysis, geospatial modeling, sustainability reporting, and reproducible data-driven workflows.</p>
-        </div>
-        
-        <!-- GitHub, LinkedIn & ORCID with icons -->
-        <a href="https://github.com/fmuranda" target="_blank" class="btn-icon">
-            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.51 7.51 0 012-.27c.68.003 1.36.092 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            GitHub
-        </a>
-
-        <a href="https://linkedin.com/in/freedommuranda" target="_blank" class="btn-icon">
-            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001 2.5 2.5 0 01.001-5zm.02 4.5h-.03c-.65 0-1.17.53-1.17 1.17v12.66c0 .64.52 1.17 1.17 1.17h.02c.65 0 1.17-.53 1.17-1.17V9.17c0-.64-.52-1.17-1.17-1.17zm7.5 0h-2.5v12h2.5v-6.4c0-1.57 2-1.69 2 0v6.4h2.5v-7.67c0-3.52-3.8-3.39-4.5-1.66V8.5z"/></svg>
-            LinkedIn
-        </a>
-
-        <a href="https://orcid.org/0009-0009-0282-3223" target="_blank" class="btn-icon">
-            <svg viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 472c-119.1 0-216-96.9-216-216S136.9 40 256 40s216 96.9 216 216-96.9 216-216 216zm0-376c-88.2 0-160 71.8-160 160s71.8 160 160 160 160-71.8 160-160-71.8-160-160-160zm0 288c-70.7 0-128-57.3-128-128s57.3-128 128-128 128 57.3 128 128-57.3 128-128 128z"/></svg>
-            ORCID
-        </a>
-
-        <div class="flex flex-col mt-8 text-center text-gray-500 text-xs">
-            <span>Hosted on GitHub Pages</span>
-        </div>
-    </div>
-
-    <!-- Main content -->
-    <div class="main-content">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-4">Portfolio</h2>
-
-        <!-- Climate Modeling & Carbon Accounting -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold text-gray-700 mb-4">🌍 Climate Modelling and Carbon Accounting</h3>
-            <div class="project-card">
-                <p class="text-gray-500">Projects focused on climate modeling workflows, greenhouse gas (GHG) accounting, emissions scenario analysis, and quantitative assessment of environmental datasets.</p>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-slate-600 hover:bg-slate-50 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="text-slate-600 hover:bg-slate-50 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#education" class="text-slate-600 hover:bg-slate-50 block px-3 py-2 rounded-md text-base font-medium">Education</a>
+                <a href="#contact" class="text-brand-600 block px-3 py-2 rounded-md text-base font-medium">Connect</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Climate Data Science & AI -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold text-gray-700 mb-4">🤖 Climate Data Science and AI</h3>
-            <div class="project-card">
-                <p class="text-gray-500">Applying AI and data science to climate and ESG datasets for predictive modeling, spatiotemporal analysis, and decision support.</p>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-white">
+        <!-- Abstract background elements -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-400/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-600/5 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wider mb-8 reveal">
+                <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                ESG & Sustainability | Climate Risk | Sustainability Assurance
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold font-display text-slate-900 mb-6 leading-tight reveal delay-100">
+                Data-Driven <span class="gradient-text">Sustainability</span>
+            </h1>
+            
+            <p class="max-w-2xl text-lg md:text-xl text-slate-600 mb-10 leading-relaxed reveal delay-200">
+                I am Freedom Kudakwashe Muranda. I bridge the gap between <span class="text-brand-700 font-medium">Machine Learning</span> and <span class="text-brand-700 font-medium">Operational Compliance</span> to drive measurable ESG impact.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 reveal delay-300">
+                <a href="#skills" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg transition-all shadow-md flex items-center justify-center gap-2">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                    View Expertise
+                </a>
+                <a href="#contact" class="px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                    <i data-lucide="share-2" class="w-4 h-4"></i>
+                    Connect
+                </a>
+            </div>
+
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-100 pt-10 w-full max-w-4xl reveal delay-300">
+                <div>
+                    <div class="text-3xl font-bold font-display text-brand-600">MSc</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold">Climate Modelling</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold font-display text-brand-600">ISO</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold leading-relaxed">System Auditor</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold font-display text-brand-600">ACSAP</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold">Assurance Practitioner</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold font-display text-brand-600">AI</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1 font-bold leading-relaxed">Climate Science</div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- ESG & Sustainability Projects -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold text-gray-700 mb-4">♻️ ESG and Sustainability Projects</h3>
-            <div class="project-card">
-                <p class="text-gray-500">Applied projects in sustainability reporting, ESG assurance, and climate disclosure aligned with international frameworks.</p>
-                <ul class="list-disc pl-5 space-y-2 text-gray-600 mt-4">
-                    <li>Consolidated multi-year sustainability disclosures for Econet Wireless and EcoCash Holdings</li>
-                    <li>ESG assurance and alignment with <strong>GRI, SASB, TCFD, IFRS, CDP</strong></li>
-                    <li>Developed methodologies to quantify climate-related risks and opportunities</li>
-                </ul>
+    <!-- About Summary -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 mb-8">Professional Summary</h2>
+            <p class="text-lg text-slate-600 leading-relaxed text-left md:text-center">
+                I am a sustainability and climate professional specialized in leading ESG strategy, sustainability reporting, and climate risk management. As a <span class="text-brand-700 font-semibold">Certified Sustainability Professional</span>, I focus on integrating sustainability into core business operations by leveraging advanced data modeling, advising leadership, and delivering outcomes aligned with international standards like GRI, TCFD, and IFRS.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-display text-slate-900 mb-4">Technical Proficiency</h2>
+                <div class="h-1.5 w-16 bg-brand-400 rounded-full mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI & Machine Learning -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all reveal">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="brain-circuit" class="w-6 h-6 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Python</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">TensorFlow</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">PyTorch</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Computer Vision</span>
+                    </div>
+                </div>
+
+                <!-- Climate & Geospatial -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all reveal delay-100">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="globe" class="w-6 h-6 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Climate & Geospatial</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Google Earth Engine</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">QGIS</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Xarray</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Climate Modelling</span>
+                    </div>
+                </div>
+
+                <!-- Internal Audit & Data -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all reveal delay-200">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="check-square" class="w-6 h-6 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Audit & Data</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">ISO Auditing</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Power BI</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">SQL</span>
+                        <span class="px-3 py-1 bg-slate-50 rounded-lg text-xs font-semibold text-slate-600 border border-slate-100">Assurance Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-slate-100">
+                <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest text-center">Compliance Standards & Frameworks</p>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-slate-500 font-medium text-sm">
+                    <span class="hover:text-brand-600 transition-colors">GRI Standards</span>
+                    <span class="hover:text-brand-600 transition-colors">TCFD Disclosure</span>
+                    <span class="hover:text-brand-600 transition-colors">IFRS S1 & S2</span>
+                    <span class="hover:text-brand-600 transition-colors">GHG Protocol</span>
+                    <span class="hover:text-brand-600 transition-colors">ISO 14064 & 9001</span>
+                    <span class="hover:text-brand-600 transition-colors">SASB</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Data Analysis & Visualization -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold text-gray-700 mb-4">📊 Data Analysis and Visualization</h3>
-            <div class="project-card">
-                <p class="text-gray-500">Reusable workflows, scripts, and notebooks for cleaning, analyzing, and visualizing climate, ESG, and sustainability data.</p>
+    <!-- Education & Certifications -->
+    <section id="education" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Education -->
+                <div>
+                    <h2 class="text-3xl font-bold font-display text-slate-900 mb-10 flex items-center gap-3">
+                        <i data-lucide="graduation-cap" class="text-brand-600"></i> Academic Background
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm reveal">
+                            <div class="flex justify-between items-start flex-wrap gap-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">MSc in Climate Science & Systems Modelling</h3>
+                                    <p class="text-brand-600 font-medium mt-1">University of Zimbabwe</p>
+                                </div>
+                                <span class="bg-slate-100 text-slate-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Dec 2024</span>
+                            </div>
+                            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                                Specialization in Spatiotemporal Analysis of Climate Variables Under ENSO Influence.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm reveal">
+                            <div class="flex justify-between items-start flex-wrap gap-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">BSc Honours in Applied Environmental Science</h3>
+                                    <p class="text-brand-600 font-medium mt-1">University of Zimbabwe</p>
+                                </div>
+                                <span class="bg-slate-100 text-slate-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Aug 2012</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-3xl font-bold font-display text-slate-900 mb-10 flex items-center gap-3">
+                        <i data-lucide="award" class="text-brand-600"></i> Credentials
+                    </h2>
+                    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm reveal">
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                </div>
+                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Certified Sustainability Professional</strong></span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                </div>
+                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">ACSAP</strong> - Associate Certified Sustainability Assurance Practitioner</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                </div>
+                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">GRI Certified</strong> (Human Rights, SDGs, ESRS)</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                </div>
+                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Technical Expert Reviewer</strong> - UNFCCC ETF</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 bg-brand-50 p-1 rounded-full">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                                </div>
+                                <span class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Certified Carbon Footprint Analyst</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Academic Research -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold text-gray-700 mb-4">📚 Academic Research</h3>
-            <div class="project-card">
-                <p class="text-gray-500"><strong>Master’s Research Project:</strong> Spatiotemporal Analysis of Climate Variables Under ENSO Influence in Chimanimani, Zimbabwe (2015–2024)</p>
-                <ul class="list-disc pl-5 space-y-2 text-gray-600 mt-4">
-                    <li>Investigated climate variability under El Niño–Southern Oscillation (ENSO)</li>
-                    <li>Integrated MODIS and Landsat satellite datasets</li>
-                    <li>Used Python, R, Google Earth Engine, and QGIS for analysis</li>
-                </ul>
+    <!-- Footer / Contact -->
+    <section id="contact" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold font-display text-slate-900 mb-6">Connect</h2>
+            
+            <div class="flex flex-col items-center gap-10 mb-16">
+                <!-- Replace # with actual URL when ready -->
+                <a href="https://github.com/fmuranda" class="inline-flex items-center gap-3 px-10 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-brand-500/20 group scale-105">
+                    <i data-lucide="file-text" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    Download My CV
+                </a>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="https://linkedin.com/in/freedommuranda" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-50 border border-slate-200 rounded-full text-slate-700 transition-all font-medium shadow-sm">
+                        <i data-lucide="linkedin" class="w-4 h-4 text-brand-600"></i> linkedin.com/in/freedommuranda
+                    </a>
+                    <a href="https://github.com/fmuranda" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-50 border border-slate-200 rounded-full text-slate-700 transition-all font-medium shadow-sm">
+                        <i data-lucide="github" class="w-4 h-4 text-brand-600"></i> fmuranda
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-10 border-t border-slate-100">
+                <p class="text-slate-400 text-xs tracking-widest uppercase font-bold">
+                    &copy; 2026 Freedom K. Muranda • Certified Sustainability Professional
+                </p>
             </div>
         </div>
+    </section>
 
-    </div>
-</div>
+    <script>
+        lucide.createIcons();
 
+        // Reveal on scroll logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+    </script>
 </body>
 </html>
